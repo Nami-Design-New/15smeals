@@ -264,6 +264,7 @@ header {
   flex-direction: column;
   background-color: var(--whiteColor);
   isolation: isolate;
+  z-index: 9999;
 }
 header .topHeader {
   display: flex;
@@ -451,15 +452,16 @@ header nav .inner .navbar .center {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: start;
-    padding: 20px;
+    padding: 40px 20px;
     width: 100%;
-    height: calc(100vh - 146px);
+    height: calc(100dvh - 146px);
     flex: auto;
     transform: translateX(100%);
     position: absolute;
     left: 0;
     top: 100%;
     transition: var(--transition);
+    z-index: -2;
   }
   header nav .inner .navbar.active {
     transform: translateX(0%);
@@ -504,7 +506,7 @@ header .headerAnimate .inner .logo {
 }
 @media screen and (max-width: 768px) {
   header .headerAnimate .inner .navbar {
-    height: calc(100vh - 54px);
-    padding-top: 40px;
+    height: calc(100dvh - 54px);
+    padding-top: 60px;
   }
 }/*# sourceMappingURL=style.css.map */
