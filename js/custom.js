@@ -30,6 +30,15 @@ $(document).ready(function () {
   $(".sideBtn").click(function () {
     $("header .navbar").toggleClass("active");
   });
+  $(window).scroll(function () {
+    var appScroll = $(document).scrollTop();
+    if (appScroll >= 80) {
+      $("header nav").addClass("headerAnimate");
+    } else {
+      $("header nav").removeClass("headerAnimate");
+    }
+  });
+
 });
 
 // ////////////////////////////////////////

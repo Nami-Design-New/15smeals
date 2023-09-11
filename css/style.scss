@@ -343,6 +343,8 @@ header {
     text-align: center;
     position: relative;
     border-bottom: 5px solid #206332;
+    width: 100%;
+    transition: var(--transition);
     .inner {
       width: min(100% - 24px, 1320px);
       margin: auto;
@@ -451,6 +453,29 @@ header {
           height: 2px;
           background-color: var(--whiteColor);
         }
+      }
+    }
+  }
+  .headerAnimate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 8px;
+    .inner::before {
+      content: "";
+      width: 90px;
+      height: 90px;
+      top: 70%;
+    }
+    .inner .logo {
+      width: 80px;
+      height: 80px;
+      top: 70%;
+    }
+    @media screen and (max-width: 768px) {
+      .inner .navbar {
+        height: calc(100vh - 54px);
+        padding-top: 40px;
       }
     }
   }
