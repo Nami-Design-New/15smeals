@@ -39,6 +39,59 @@ $(document).ready(function () {
     }
   });
 
+  //mainSlider
+  var mainSlider = new Swiper(".mainSliderContainer", {
+    spaceBetween: 0,
+    loop: true,
+    // effect: "fade",
+    centeredSlides: true,
+    speed: 500,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".mainSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".mainSliderNext",
+      prevEl: ".mainSliderPrev",
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true, 
+  },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+    on: {
+      slideChange: function () {
+        var allVideos = document.querySelectorAll(".mainSliderContainer video");
+        allVideos.forEach(function (video) {
+          video.pause();
+        });
+        var activeSlide = this.slides[this.activeIndex];
+        var activeVideo = activeSlide.querySelector(
+          ".mainSliderContainer video"
+        );
+        if (activeVideo) {
+          activeVideo.play();
+        }
+      },
+    },
+  });
 });
 
 // ////////////////////////////////////////
