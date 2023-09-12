@@ -38,7 +38,7 @@ $(document).ready(function () {
   //mainSlider
   function calculateAutoplayDelay(video, minimumDelay) {
     if (video) {
-      const videoDuration = video.duration * 1000; 
+      const videoDuration = video.duration * 1000;
       return Math.max(videoDuration, minimumDelay);
     }
     return minimumDelay;
@@ -111,6 +111,50 @@ $(document).ready(function () {
       video.pause();
     });
   }
+
+  //latestSlider Slider
+  var latestSlider = new Swiper(".latestSlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".latestPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".latestSliderNext",
+      prevEl: ".latestSliderPrev",
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      468: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      1400: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  $(".latestSlider .dishes").hover(function () {
+    $(".latestSlider .dishes")
+      .not($(this).find(".dishes"))
+      .removeClass("haverd");
+    $(this).addClass("haverd");
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
