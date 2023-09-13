@@ -37,11 +37,11 @@
 
 ::-webkit-scrollbar-track {
   border-radius: 0px !important;
-  background: #272727;
+  background: #dddddd;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #424242;
+  background-color: #a1a1a1;
   outline: none;
   border-radius: 20px !important;
 }
@@ -777,7 +777,7 @@ header .headerAnimate .inner .logo {
   padding: 24px;
   padding-top: 40px;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -882,4 +882,253 @@ header .headerAnimate .inner .logo {
 }
 .latest .latestSlider .dishes.haverd::after {
   top: -60%;
+}
+
+.mainCategories {
+  padding: 70px 0;
+}
+.mainCategories .categories {
+  background-color: var(--secondColor05);
+  padding: 16px;
+  border-radius: 12px;
+  position: sticky;
+  top: 120px;
+}
+.mainCategories .categories .accordionItem {
+  display: flex;
+  flex-direction: column;
+}
+.mainCategories .categories .accordionItem .accordionButton {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  display: flex;
+  font-weight: bold;
+  position: relative;
+  font-size: 16px;
+}
+.mainCategories .categories .accordionItem .accordionButton .plus {
+  position: absolute;
+  left: 8px;
+  top: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+}
+.mainCategories .categories .accordionItem .accordionButton .plus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 12px;
+  height: 2px;
+  background-color: var(--secondColor);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+.mainCategories .categories .accordionItem .accordionButton .plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 12px;
+  height: 2px;
+  background-color: var(--secondColor);
+  border-radius: 10px;
+  transition: var(--transition);
+  transform: rotate(0deg);
+}
+.mainCategories .categories .accordionItem .accordionButton.collapsed .plus::after {
+  transform: rotate(90deg);
+}
+.mainCategories .categories .accordionItem .subCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0 24px;
+  padding-right: 16px;
+}
+.mainCategories .categories .accordionItem .subCategory a {
+  color: var(--grayColor);
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mainCategories .categories .accordionItem .subCategory a::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--mainColor);
+  transition: var(--transition);
+  border-radius: 8px;
+  transform: translateY(4px);
+}
+.mainCategories .categories .accordionItem .subCategory a:hover, .mainCategories .categories .accordionItem .subCategory a.active {
+  color: var(--mainColor);
+}
+.mainCategories .categories .accordionItem .subCategory a:hover::before, .mainCategories .categories .accordionItem .subCategory a.active::before {
+  width: 12px;
+}
+.mainCategories .categories .accordionItem:last-child .accordionButton {
+  border-color: transparent;
+}
+.mainCategories .recipes .subCategoryImg {
+  margin-bottom: 24px;
+  position: relative;
+}
+.mainCategories .recipes .subCategoryImg img {
+  width: 100%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.mainCategories .recipes .subCategoryImg .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 24px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  background: linear-gradient(to left, rgba(144, 99, 72, 0.7098039216) 20%, rgba(144, 99, 72, 0));
+  border-radius: 12px;
+}
+.mainCategories .recipes .subCategoryImg .text .title {
+  font-weight: bold;
+  color: var(--whiteColor);
+}
+.mainCategories .recipes .recipe {
+  background-color: var(--secondColor05);
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition);
+}
+.mainCategories .recipes .recipe img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainCategories .recipes .recipe .info {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  position: relative;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .mainCategories .recipes .recipe .info {
+    padding: 8px;
+  }
+}
+.mainCategories .recipes .recipe .info .name {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--mainColor);
+}
+.mainCategories .recipes .recipe .info .details {
+  color: var(--grayColor);
+  font-size: 14px;
+  margin-top: auto;
+}
+.mainCategories .pagination {
+  gap: 4px;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.mainCategories .pagination a {
+  background-color: var(--secondColor05);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--secondColor);
+}
+.mainCategories .pagination a.active {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+}
+.mainCategories .pagination a.disabled {
+  background-color: var(--lightGrayColor);
+  color: var(--grayColor);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+
+.news {
+  padding: 70px 0;
+}
+.news .subscribeNews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 70px 24px;
+  border-radius: 24px;
+  min-height: 40vh;
+  background-image: url(../img/meals/1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+.news .subscribeNews::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 24px;
+  background: linear-gradient(45deg, rgba(32, 99, 50, 0.7137254902), rgba(32, 99, 50, 0.7058823529));
+}
+.news .subscribeNews .text {
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.news .subscribeNews .text .title {
+  font-weight: bold;
+}
+.news .subscribeNews form {
+  position: relative;
+  width: min(100% - 24px, 500px);
+}
+.news .subscribeNews form input {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 100px;
+  padding: 16px 24px;
+  padding-left: 100px;
+  border: none;
+}
+.news .subscribeNews form button {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--mainColor);
+  color: var(--whiteColor);
+  padding: 12px 20px;
+  border-radius: 100px;
 }/*# sourceMappingURL=style.css.map */
