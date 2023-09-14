@@ -111,7 +111,6 @@ $(document).ready(function () {
       video.pause();
     });
   }
-
   //latestSlider Slider
   var latestSlider = new Swiper(".latestSlider", {
     // centeredSlides: true,
@@ -154,6 +153,55 @@ $(document).ready(function () {
       .not($(this).find(".dishes"))
       .removeClass("haverd");
     $(this).addClass("haverd");
+  });
+  //blogSlider Slider
+  var blogSlider = new Swiper(".blogSlider", {
+    pagination: {
+      el: ".blogPagination",
+      clickable: true,
+    },
+
+    // centeredSlides: true,
+    // loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+  });
+  // blog
+  $(".singleBlog .description").each(function () {
+    var text = $(this).text();
+    if (text.length > 130) {
+      var truncatedText =
+        $.trim(text).substring(0, 130).split(" ").slice(0, -1).join(" ") +
+        "...";
+      $(this).text(truncatedText);
+    }
+  });
+  $(".singleBlog .title ").each(function () {
+    var text = $(this).text();
+    if (text.length > 45) {
+      var truncatedText =
+        $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") + "...";
+      $(this).text(truncatedText);
+    }
   });
 });
 // ////////////////////////////////////////
