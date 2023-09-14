@@ -1083,7 +1083,7 @@ header .headerAnimate .inner .logo {
   padding: 70px 24px;
   border-radius: 24px;
   min-height: 30vh;
-  background-image: url(../img/meals/1.jpg);
+  background-image: url(../img/subscribe.webp);
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -1317,4 +1317,87 @@ header .headerAnimate .inner .logo {
 }
 .singleBlog:hover .date i {
   color: var(--whiteColor);
+}
+
+footer {
+  background: linear-gradient(-45deg, #389250, #206332);
+  color: var(--whiteColor);
+}
+footer .logo {
+  margin-bottom: 24px;
+}
+footer .logo img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right;
+     object-position: right;
+  max-height: 100px;
+  filter: brightness(0) invert(1);
+}
+footer .title {
+  font-weight: bold;
+  color: var(--whiteColor);
+}
+footer .subscribeNews .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+footer .subscribeNews p {
+  font-size: 12px;
+}
+footer .subscribeNews form {
+  position: relative;
+}
+footer .subscribeNews form input {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 100px;
+  padding: 16px 24px;
+  padding-left: 100px;
+  border: none;
+}
+footer .subscribeNews form button {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--mainColor);
+  color: var(--whiteColor);
+  padding: 12px 20px;
+  border-radius: 100px;
+}
+footer .socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+footer .socialMedia a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+}
+footer .socialMedia a svg {
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
+}
+footer .socialMedia a svg path {
+  fill: var(--mainColor);
+  transition: var(--transition);
+}
+footer .socialMedia a:hover {
+  background-color: var(--mainColor);
+  transform: translateY(-5px);
+}
+footer .socialMedia a:hover svg path {
+  fill: var(--whiteColor);
 }/*# sourceMappingURL=style.css.map */

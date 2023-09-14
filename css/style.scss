@@ -1036,7 +1036,7 @@ header {
     padding: 70px 24px;
     border-radius: 24px;
     min-height: 30vh;
-    background-image: url(../img/meals/1.jpg);
+    background-image: url(../img/subscribe.webp);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -1206,12 +1206,12 @@ header {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-    .showAll{
+    .showAll {
       display: inline-flex;
       align-items: center;
       gap: 4px;
       color: var(--mainColor);
-      .arrow{
+      .arrow {
         width: 16px;
         height: 16px;
         object-fit: contain;
@@ -1270,6 +1270,92 @@ header {
     .date {
       i {
         color: var(--whiteColor);
+      }
+    }
+  }
+}
+
+footer {
+  background: linear-gradient(-45deg , #389250, #206332);
+  color: var(--whiteColor);
+  .logo {
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      object-position: right;
+      max-height: 100px;
+      filter: brightness(0) invert(1);
+    }
+  }
+  .title {
+    font-weight: bold;
+    color: var(--whiteColor);
+  }
+  .subscribeNews {
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 12px;
+    }
+    form {
+      position: relative;
+      input {
+        width: 100%;
+        min-height: 54px;
+        border-radius: 100px;
+        padding: 16px 24px;
+        padding-left: 100px;
+        border: none;
+      }
+      button {
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--mainColor);
+        color: var(--whiteColor);
+        // height: 100%;
+        padding: 12px 20px;
+        border-radius: 100px;
+      }
+    }
+  }
+  .socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      transition: var(--transition);
+      background-color: var(--whiteColor);
+      svg {
+        width: 16px;
+        height: 16px;
+        transition: var(--transition);
+        path {
+          fill: var(--mainColor);
+          transition: var(--transition);
+        }
+      }
+      &:hover {
+        background-color: var(--mainColor);
+        transform: translateY(-5px);
+        svg {
+          path {
+            fill: var(--whiteColor);
+          }
+        }
       }
     }
   }
