@@ -1360,3 +1360,48 @@ footer {
     }
   }
 }
+
+
+.banner {
+  background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe), url(../img/subscribe.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 250px 0 50px;
+  position: relative;
+  display: flex;
+  margin-top: -100px;
+  text-align: center;
+  @media (max-width: 768px) {
+    padding: 200px 0 30px;
+  }
+  .links {
+    a {
+      padding: 4px;
+      position: relative;
+      color: var(--whiteColor);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: capitalize;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      &::after {
+        content: " - ";
+      }
+      &.active {
+        cursor: default;
+        color: var(--grayColor);
+      }
+    }
+  }
+  .pageName {
+    font-weight: bold;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+}

@@ -1400,4 +1400,46 @@ footer .socialMedia a:hover {
 }
 footer .socialMedia a:hover svg path {
   fill: var(--whiteColor);
+}
+
+.banner {
+  background-image: linear-gradient(rgba(31, 31, 31, 0.7882352941), rgba(31, 31, 31, 0.7450980392)), url(../img/subscribe.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 250px 0 50px;
+  position: relative;
+  display: flex;
+  margin-top: -100px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 200px 0 30px;
+  }
+}
+.banner .links a {
+  padding: 4px;
+  position: relative;
+  color: var(--whiteColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+.banner .links a:last-child::after {
+  display: none;
+}
+.banner .links a::after {
+  content: " - ";
+}
+.banner .links a.active {
+  cursor: default;
+  color: var(--grayColor);
+}
+.banner .pageName {
+  font-weight: bold;
+  color: var(--whiteColor);
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
