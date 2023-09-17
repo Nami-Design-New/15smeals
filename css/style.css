@@ -1045,24 +1045,25 @@ header .headerAnimate .inner .logo {
   font-size: 14px;
   margin-top: auto;
 }
-.mainCategories .pagination {
+
+.pagination {
   gap: 4px;
   align-items: center;
   margin-top: 24px;
   flex-wrap: wrap;
 }
-.mainCategories .pagination a {
+.pagination a {
   background-color: var(--secondColor05);
   padding: 8px 16px;
   border-radius: 12px;
   font-size: 13px;
   color: var(--secondColor);
 }
-.mainCategories .pagination a.active {
+.pagination a.active {
   background-color: var(--secondColor);
   color: var(--whiteColor);
 }
-.mainCategories .pagination a.disabled {
+.pagination a.disabled {
   background-color: var(--lightGrayColor);
   color: var(--grayColor);
   -webkit-user-select: none;
@@ -1442,4 +1443,90 @@ footer .socialMedia a:hover svg path {
   color: var(--whiteColor);
   text-transform: capitalize;
   margin-bottom: 10px;
+}
+
+.blogDetails {
+  padding: 50px 0;
+}
+.blogDetails .blog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+  padding-bottom: 48px;
+}
+.blogDetails .blog img {
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.blogDetails .blog .date {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--blackColor);
+  color: #777;
+}
+.blogDetails .blog .date i {
+  color: var(--mainColor);
+  font-size: 16px;
+}
+.blogDetails .blog .title {
+  color: var(--darkColor);
+  transition: var(--transition);
+}
+.blogDetails .blog .description {
+  color: #777;
+}
+.blogDetails .Moreblogs {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100%;
+  gap: 32px;
+}
+.blogDetails .Moreblogs .headTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: relative;
+}
+.blogDetails .Moreblogs .headTitle::after {
+  content: "";
+  width: 30%;
+  background-color: var(--mainColor);
+  height: 2px;
+  display: flex;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .blogDetails .Moreblogs .headTitle {
+    font-size: 22px;
+  }
+}
+.blogDetails .Moreblogs .blog {
+  display: flex;
+  gap: 12px;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: row;
+  padding-bottom: 0px;
+  padding: 0;
+}
+.blogDetails .Moreblogs .blog .data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.blogDetails .Moreblogs .blog .title {
+  color: var(--lightGrayColor);
+}
+.blogDetails .Moreblogs .blog img {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
