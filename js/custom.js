@@ -29,10 +29,12 @@ $(document).ready(function () {
   });
   $(window).scroll(function () {
     var appScroll = $(document).scrollTop();
-    if (appScroll >= 80) {
+    if (appScroll >= 64) {
       $("header nav").addClass("headerAnimate");
+      $("header .topHeader").addClass("addHeight");
     } else {
       $("header nav").removeClass("headerAnimate");
+      $("header .topHeader").removeClass("addHeight");
     }
   });
   //mainSlider
@@ -186,7 +188,7 @@ $(document).ready(function () {
     },
   });
   // blog
-  $(".singleBlog .description").each(function () {
+  $(".Moreblogs .blog .description , .singleBlog .description").each(function () {
     var text = $(this).text();
     if (text.length > 130) {
       var truncatedText =
@@ -195,7 +197,7 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
-  $(".singleBlog .title ").each(function () {
+  $(".Moreblogs .blog .title ,.singleBlog .title ").each(function () {
     var text = $(this).text();
     if (text.length > 45) {
       var truncatedText =

@@ -12,6 +12,14 @@
   --transition: 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
+  body,
+  span,
+  p {
+    font-size: 13px;
+  }
+  h6 {
+    font-size: 14px;
+  }
 }
 @font-face {
   font-family: madani;
@@ -329,6 +337,9 @@ header {
         }
       }
     }
+    &.addHeight{
+      height: 132px;
+    }
   }
   nav {
     background-color: var(--mainColor);
@@ -402,6 +413,7 @@ header {
           gap: 8px;
           padding: 12px;
           display: flex;
+          font-size: 16px;
         }
         .center {
           width: 100%;
@@ -1000,7 +1012,6 @@ header {
       }
     }
   }
-
 }
 .pagination {
   gap: 4px;
@@ -1277,7 +1288,7 @@ header {
 }
 
 footer {
-  background: linear-gradient(-45deg , #389250, #206332);
+  background: linear-gradient(-45deg, #389250, #206332);
   color: var(--whiteColor);
   .logo {
     margin-bottom: 24px;
@@ -1362,9 +1373,9 @@ footer {
   }
 }
 
-
 .banner {
-  background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe), url(../img/subscribe.webp);
+  background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe),
+    url(../img/subscribe.webp);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -1407,7 +1418,6 @@ footer {
   }
 }
 
-
 .blogDetails {
   padding: 50px 0;
   .blog {
@@ -1422,13 +1432,13 @@ footer {
       aspect-ratio: 2/1;
       object-fit: cover;
       width: 100%;
+      border-radius: 12px;
     }
     .date {
       display: flex;
       gap: 8px;
       align-items: center;
-      color: var(--blackColor);
-      color: #777;
+      color: var(--darkColor);
       i {
         color: var(--mainColor);
         font-size: 16px;
@@ -1478,13 +1488,18 @@ footer {
         gap: 4px;
       }
       .title {
-        color: var(--lightGrayColor);
+        color: var(--darkColor);
+      }
+      .description {
+        font-size: 13px;
+        color: var(--grayColor);
       }
       img {
         width: 120px;
         height: 120px;
         aspect-ratio: 1/1;
         object-fit: cover;
+        border-radius: 12px;
       }
     }
   }
