@@ -232,7 +232,7 @@ $(document).ready(function () {
       nextEl: ".recipeSliderNext",
       prevEl: ".recipeSliderPrev",
     },
-    
+
     thumbs: {
       swiper: recipeThumbs,
     },
@@ -315,3 +315,10 @@ function dehighlight(el) {
     el.previousElementSibling.classList.remove("h");
   }
 }
+
+// Add a click event handler to all elements with class "check"
+$(document).ready(function () {
+  $(".makeIt .check").on("click", function () {
+    $(this).closest("li").toggleClass("done");
+  });
+});
