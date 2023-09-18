@@ -169,7 +169,7 @@ button {
   }
 }
 content {
-  min-height: 13.29vh;
+  min-height: calc(100vh - 502px);
   display: flex;
   flex-direction: column;
 }
@@ -945,6 +945,10 @@ header {
     .subCategoryImg {
       margin-bottom: 24px;
       position: relative;
+
+      .simpleParallax{
+        border-radius: 12px;
+      }
       img {
         width: 100%;
         max-height: 200px;
@@ -1379,13 +1383,12 @@ footer {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 250px 0 50px;
+  padding: 150px 0 50px;
   position: relative;
   display: flex;
-  margin-top: -100px;
   text-align: center;
   @media (max-width: 768px) {
-    padding: 200px 0 30px;
+    padding: 50px 0 30px;
   }
   .links {
     a {
