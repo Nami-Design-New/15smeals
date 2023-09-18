@@ -374,7 +374,6 @@ header nav {
   color: var(--whiteColor);
   text-align: center;
   position: relative;
-  border-bottom: 5px solid #206332;
   width: 100%;
   transition: var(--transition);
 }
@@ -536,13 +535,13 @@ header .headerAnimate .inner .logo {
   display: flex;
   align-items: end;
   width: 100%;
-  height: calc(100dvh - 133px);
+  height: calc(100dvh - 123px);
   background-color: var(--darkColor);
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .mainSlider .mainSliderContainer .swiper-slide {
-    height: calc(100dvh - 151px);
+    height: calc(100dvh - 141px);
   }
 }
 .mainSlider .mainSliderContainer .swiper-slide .videoContainer {
@@ -567,7 +566,7 @@ header .headerAnimate .inner .logo {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.8235294118) 75%);
+  background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.7450980392));
   position: absolute;
   bottom: 0;
   right: 0;
@@ -577,6 +576,7 @@ header .headerAnimate .inner .logo {
 .mainSlider .mainSliderContainer .swiper-slide .info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
   padding: 40px;
   padding-bottom: 80px;
@@ -608,6 +608,7 @@ header .headerAnimate .inner .logo {
   }
 }
 .mainSlider .mainSliderContainer .swiper-slide .info .link {
+  opacity: 0;
   margin-top: 10px;
   text-transform: uppercase;
   display: inline-flex;
@@ -616,9 +617,13 @@ header .headerAnimate .inner .logo {
   gap: 8px;
   align-items: baseline;
   color: var(--lightGrayColor);
+  border: 1px solid var(--lightGrayColor);
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 .mainSlider .mainSliderContainer .swiper-slide .info .link:hover {
   color: var(--whiteColor);
+  border-color: var(--whiteColor);
 }
 .mainSlider .swiper-slide-active .sliderTitle {
   animation: fadeInUp 1s 0.5s both;
@@ -1336,8 +1341,7 @@ header .headerAnimate .inner .logo {
 }
 
 footer {
-  background: linear-gradient(-45deg, #389250, #206332);
-  color: var(--whiteColor);
+  background: var(--secondColor05);
 }
 footer .logo {
   margin-bottom: 24px;
@@ -1350,11 +1354,9 @@ footer .logo img {
   -o-object-position: right;
      object-position: right;
   max-height: 100px;
-  filter: brightness(0) invert(1);
 }
 footer .title {
   font-weight: bold;
-  color: var(--whiteColor);
 }
 footer .subscribeNews .text {
   display: flex;
@@ -1374,14 +1376,14 @@ footer .subscribeNews form input {
   border-radius: 100px;
   padding: 16px 24px;
   padding-left: 100px;
-  border: none;
+  border: 1px solid var(--secondColor20);
 }
 footer .subscribeNews form button {
   position: absolute;
   left: 6px;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--mainColor);
+  background: var(--secondColor);
   color: var(--whiteColor);
   padding: 12px 20px;
   border-radius: 100px;
@@ -1407,11 +1409,11 @@ footer .socialMedia a svg {
   transition: var(--transition);
 }
 footer .socialMedia a svg path {
-  fill: var(--mainColor);
+  fill: var(--secondColor);
   transition: var(--transition);
 }
 footer .socialMedia a:hover {
-  background-color: var(--mainColor);
+  background-color: var(--secondColor);
   transform: translateY(-5px);
 }
 footer .socialMedia a:hover svg path {
@@ -1419,28 +1421,36 @@ footer .socialMedia a:hover svg path {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(31, 31, 31, 0.7882352941), rgba(31, 31, 31, 0.7450980392)), url(../img/subscribe.webp);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  padding: 150px 0 50px;
+  background-image: url(../img/bg-pattern.png);
+  background-repeat: no-repeat;
+  background-color: var(--secondColor05);
+  padding: 120px 0 100px;
   position: relative;
   display: flex;
   text-align: center;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .banner {
-    padding: 50px 0 30px;
+    padding: 70px 0 50px;
   }
+}
+.banner .pageName {
+  position: relative;
+  z-index: 3;
+}
+.banner .links {
+  position: relative;
+  z-index: 3;
 }
 .banner .links a {
   padding: 4px;
-  position: relative;
-  color: var(--whiteColor);
+  color: var(--secondColor);
   display: inline-flex;
   align-items: center;
   gap: 12px;
   text-transform: capitalize;
+  font-size: 14px;
 }
 .banner .links a:last-child::after {
   display: none;
@@ -1454,7 +1464,7 @@ footer .socialMedia a:hover svg path {
 }
 .banner .pageName {
   font-weight: bold;
-  color: var(--whiteColor);
+  color: var(--secondColor);
   text-transform: capitalize;
   margin-bottom: 10px;
 }
@@ -1548,4 +1558,371 @@ footer .socialMedia a:hover svg path {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;
+}
+
+.about {
+  padding: 100px 0;
+}
+.about .head {
+  align-items: center;
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) {
+  .about .head {
+    text-align: center;
+  }
+  .about .head .title {
+    margin: auto;
+  }
+}
+.about .head img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-height: 250px;
+}
+.about .head .info .more {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+}
+.about .head .info .more li {
+  color: #777;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .about .head .info .more li {
+    font-size: 12px;
+  }
+}
+.about .missionVision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .about .missionVision {
+    padding: 0 24px;
+  }
+}
+.about .missionVision .mission,
+.about .missionVision .vision,
+.about .missionVision .passion {
+  flex: 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px 24px;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  .about .missionVision .mission,
+  .about .missionVision .vision,
+  .about .missionVision .passion {
+    background-color: #fff;
+    box-shadow: var(--BigShadow);
+  }
+}
+.about .missionVision .mission .icon,
+.about .missionVision .vision .icon,
+.about .missionVision .passion .icon {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainColor05);
+  border: 1px solid var(--mainColor20);
+  border-radius: 16px;
+  transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .about .missionVision .mission .icon,
+  .about .missionVision .vision .icon,
+  .about .missionVision .passion .icon {
+    height: 80px;
+    width: 80px;
+  }
+}
+.about .missionVision .mission .icon img,
+.about .missionVision .vision .icon img,
+.about .missionVision .passion .icon img {
+  height: 54px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  .about .missionVision .mission .icon img,
+  .about .missionVision .vision .icon img,
+  .about .missionVision .passion .icon img {
+    height: 48px;
+  }
+}
+.about .missionVision .mission .name,
+.about .missionVision .vision .name,
+.about .missionVision .passion .name {
+  margin-top: 32px;
+  font-weight: bold;
+  color: var(--mainColor);
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .about .missionVision .mission .name,
+  .about .missionVision .vision .name,
+  .about .missionVision .passion .name {
+    margin-top: 24px;
+  }
+}
+.about .missionVision .mission .des,
+.about .missionVision .vision .des,
+.about .missionVision .passion .des {
+  color: #777;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .about .missionVision .mission .des,
+  .about .missionVision .vision .des,
+  .about .missionVision .passion .des {
+    font-size: 12px;
+  }
+}
+
+.contactPage {
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 60px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contactPage .row {
+    width: 100%;
+  }
+}
+.contactPage form {
+  padding: 32px;
+  box-shadow: var(--BigShadow);
+  background: var(--whiteColor);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+@media (max-width: 576px) {
+  .contactPage form {
+    padding: 32px 0;
+  }
+}
+.contactPage form .form-group {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .contactPage form .form-group {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+.contactPage form .form-group .inputfield {
+  width: 100%;
+  padding: 0 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.contactPage form .form-group .inputfield label {
+  position: absolute;
+  font-size: 14px;
+  color: #7b88a8;
+  right: 32px;
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: auto;
+}
+.contactPage form .form-group .inputfield label.message-label {
+  top: 20%;
+}
+.contactPage form .form-group .inputfield label.h {
+  top: -4px;
+  color: var(--mainColor);
+}
+.contactPage form .form-group .inputfield input,
+.contactPage form .form-group .inputfield textarea {
+  width: 100%;
+  height: 45px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.contactPage form .form-group .inputfield input:focus + span::after,
+.contactPage form .form-group .inputfield textarea:focus + span::after {
+  width: calc(100% - 64px);
+}
+.contactPage form .form-group .inputfield textarea {
+  padding: 16px 0;
+  height: 130px;
+}
+.contactPage form .form-group .inputfield .highlight {
+  width: 100%;
+  height: 2px;
+  background: #eeeeee;
+}
+.contactPage form .form-group .inputfield .highlight::after {
+  content: "";
+  width: 0;
+  transition: var(--transition);
+  left: 50%;
+  height: 2px;
+  background: var(--mainColor);
+  position: absolute;
+  transform: translate(-50%);
+}
+.contactPage form button {
+  border: none;
+  background: none;
+  outline: none;
+  align-self: flex-end;
+  margin-left: 32px;
+  isolation: isolate;
+  padding: 0 16px;
+  width: 166px;
+  height: 50px;
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.contactPage form button::after {
+  position: absolute;
+  content: "";
+  height: 150px;
+  width: 0;
+  left: 10px;
+  transition: var(--transition);
+  background: var(--mainColor);
+  transform: rotate(-25deg);
+  z-index: -1;
+}
+.contactPage form button:hover {
+  color: var(--whiteColor);
+  border-color: var(--mainColor);
+}
+.contactPage form button:hover::after {
+  width: 110%;
+  left: -10px;
+}
+.contactPage .map-info {
+  margin-top: 80px;
+}
+.contactPage .map-info .info {
+  border: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 8px;
+  gap: 20px;
+}
+.contactPage .map-info .info h2 {
+  color: var(--mainColor);
+  margin-bottom: 20px;
+}
+.contactPage .map-info .info .info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contactPage .map-info .info .info-card a {
+  font-weight: 400;
+  color: #7b88a8;
+  transition: var(--transition);
+}
+.contactPage .map-info .info .info-card a:hover {
+  color: var(--mainColor);
+}
+.contactPage .map-info .info .info-card .icon {
+  background-color: var(--mainColor);
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactPage .map-info .info .info-card .icon img {
+  filter: brightness(0) invert(1);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contactPage .map-info #mapLocation {
+  border-radius: 8px;
+}
+@media (max-width: 992px) {
+  .contactPage .map-info #mapLocation {
+    height: 380px !important;
+    margin-top: 32px;
+  }
+}
+
+.faq {
+  padding: 100px 0;
+}
+.faq .faqImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: top center;
+  min-height: 300px;
+}
+.faq .title {
+  font-weight: bold;
+}
+.faq .des {
+  margin-bottom: 48px;
+}
+.faq .accordion .accordion-item {
+  border: none;
+  background-color: var(--secondColor05);
+  border-radius: 12px;
+}
+.faq .accordion .accordion-button {
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--secondColor05);
+}
+.faq .accordion .accordion-button:focus {
+  box-shadow: none !important;
+}
+.faq .accordion .accordion-button::after {
+  filter: invert(1);
+}
+.faq .accordion .accordion-button:not(.collapsed) {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+  box-shadow: none !important;
+}
+.faq .accordion p {
+  color: #777;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
