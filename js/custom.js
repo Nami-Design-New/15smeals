@@ -188,15 +188,17 @@ $(document).ready(function () {
     },
   });
   // blog
-  $(".Moreblogs .blog .description , .singleBlog .description").each(function () {
-    var text = $(this).text();
-    if (text.length > 130) {
-      var truncatedText =
-        $.trim(text).substring(0, 130).split(" ").slice(0, -1).join(" ") +
-        "...";
-      $(this).text(truncatedText);
+  $(".Moreblogs .blog .description , .singleBlog .description").each(
+    function () {
+      var text = $(this).text();
+      if (text.length > 130) {
+        var truncatedText =
+          $.trim(text).substring(0, 130).split(" ").slice(0, -1).join(" ") +
+          "...";
+        $(this).text(truncatedText);
+      }
     }
-  });
+  );
   $(".Moreblogs .blog .title ,.singleBlog .title ").each(function () {
     var text = $(this).text();
     if (text.length > 45) {
@@ -204,6 +206,36 @@ $(document).ready(function () {
         $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") + "...";
       $(this).text(truncatedText);
     }
+  });
+
+  // recipe-details
+  var recipeThumbs = new Swiper(".recipeThumbs", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var recipeSlider = new Swiper(".recipeSlider", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".recipeSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".recipeSliderNext",
+      prevEl: ".recipeSliderPrev",
+    },
+    
+    thumbs: {
+      swiper: recipeThumbs,
+    },
   });
 });
 // ////////////////////////////////////////
@@ -273,8 +305,6 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
-
-
 
 //contact higlight inputs
 function highlight(el) {

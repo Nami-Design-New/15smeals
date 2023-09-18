@@ -173,7 +173,7 @@ input {
 .fancybox__track,
 .fancybox__content,
 .carousel__track {
-  direction: rtl !important;
+  direction: ltr !important;
 }
 
 .navbar-toggler {
@@ -1060,10 +1060,20 @@ header .headerAnimate .inner .logo {
   font-size: 16px;
   color: var(--mainColor);
 }
+@media (max-width: 768px) {
+  .mainCategories .recipes .recipe .info .name {
+    font-size: 14px;
+  }
+}
 .mainCategories .recipes .recipe .info .details {
   color: var(--grayColor);
   font-size: 14px;
   margin-top: auto;
+}
+@media (max-width: 768px) {
+  .mainCategories .recipes .recipe .info .details {
+    font-size: 12px;
+  }
 }
 
 .pagination {
@@ -1925,4 +1935,86 @@ footer .socialMedia a:hover svg path {
 .faq .accordion p {
   color: #777;
   font-size: 14px;
+}
+
+.recipeDetails {
+  padding: 100px 0;
+}
+.recipeDetails .mainInfo .slider {
+  background-color: var(--mainColor05);
+  border-radius: 24px;
+  padding: 16px;
+}
+.recipeDetails .mainInfo .slider .recipeSlider {
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 500px;
+  border-radius: 12px;
+}
+.recipeDetails .mainInfo .slider .recipeThumbs {
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.recipeDetails .mainInfo .slider .recipeThumbs .swiper-slide {
+  width: 25%;
+  aspect-ratio: 1/1;
+  opacity: 0.4;
+  border-radius: 12px;
+  background-color: var(--mainColor05);
+}
+.recipeDetails .mainInfo .slider .recipeThumbs .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
+.recipeDetails .mainInfo .slider .swiper-slide video,
+.recipeDetails .mainInfo .slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.recipeDetails .mainInfo .details {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.recipeDetails .mainInfo .details .title {
+  font-weight: bold;
+  color: var(--darkColor);
+}
+.recipeDetails .mainInfo .details .categoryName {
+  color: var(--secondColor);
+  font-size: 16px;
+  font-weight: bold;
+}
+.recipeDetails .mainInfo .details .desc {
+  color: var(--grayColor);
+}
+.recipeDetails .mainInfo .makeData {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-top: 40px;
+}
+.recipeDetails .mainInfo .makeData .data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border-left: 1px solid #eee;
+}
+.recipeDetails .mainInfo .makeData .data:last-child {
+  border: none;
+}
+.recipeDetails .mainInfo .makeData .data img {
+  width: 48px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */

@@ -141,7 +141,7 @@ input {
 .fancybox__track,
 .fancybox__content,
 .carousel__track {
-  direction: rtl !important;
+  direction: ltr !important;
 }
 .navbar-toggler {
   border: none;
@@ -951,7 +951,6 @@ header {
     .subCategoryImg {
       margin-bottom: 24px;
       position: relative;
-
       .simpleParallax {
         border-radius: 12px;
       }
@@ -1013,11 +1012,17 @@ header {
           font-weight: bold;
           font-size: 16px;
           color: var(--mainColor);
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
         }
         .details {
           color: var(--grayColor);
           font-size: 14px;
           margin-top: auto;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -1109,7 +1114,6 @@ header {
     }
   }
 }
-
 .count {
   padding: 70px 0;
   padding-bottom: 140px;
@@ -1154,7 +1158,6 @@ header {
     transform: translateX(-50%);
     z-index: 3;
   }
-
   .counter {
     padding: 24px;
     display: flex;
@@ -1296,7 +1299,6 @@ header {
     }
   }
 }
-
 footer {
   background: var(--secondColor05);
   .logo {
@@ -1380,7 +1382,6 @@ footer {
     }
   }
 }
-
 .banner {
   background-image: url(../img/bg-pattern.png);
   background-repeat: no-repeat;
@@ -1403,7 +1404,6 @@ footer {
   //   z-index: 1;
   //   backdrop-filter: blur(20px);
   // }
-
   .pageName {
     position: relative;
     z-index: 3;
@@ -1440,7 +1440,6 @@ footer {
     margin-bottom: 10px;
   }
 }
-
 .blogDetails {
   padding: 50px 0;
   .blog {
@@ -1627,7 +1626,6 @@ footer {
     }
   }
 }
-
 .contactPage {
   padding: 60px 0;
   @media (max-width: 768px) {
@@ -1806,7 +1804,6 @@ footer {
     }
   }
 }
-
 .faq {
   padding: 100px 0;
   .faqImg {
@@ -1846,10 +1843,104 @@ footer {
       color: var(--whiteColor);
       box-shadow: none !important;
     }
-
     p {
       color: #777;
       font-size: 14px;
+    }
+  }
+}
+.recipeDetails {
+  padding: 100px 0;
+  .mainInfo {
+    .slider {
+      background-color: var(--mainColor05);
+      border-radius: 24px;
+      padding: 16px;
+      .recipeSlider {
+        width: 100%;
+        aspect-ratio: 4/5;
+        max-height: 500px;
+        border-radius: 12px;
+        // .swiperControl .swiperBtns .swiper-button-next,
+        // .swiperControl .swiperBtns .swiper-button-prev {
+        //   color: var(--mainColor);
+        //   border: 1px solid var(--mainColor);
+        //   &::after {
+        //     filter: none;
+        //   }
+        // }
+      }
+      .recipeThumbs {
+        box-sizing: border-box;
+        padding-top: 10px;
+        .swiper-slide {
+          width: 25%;
+          aspect-ratio: 1/1;
+          opacity: 0.4;
+          border-radius: 12px;
+          background-color: var(--mainColor05);
+          &.swiper-slide-thumb-active {
+            opacity: 1;
+          }
+        }
+      }
+      .swiper-slide {
+        video,
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+        // img {
+        //   object-fit: contain;
+        // }
+      }
+    }
+
+    .details {
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      .title {
+        font-weight: bold;
+        color: var(--darkColor);
+      }
+      .categoryName {
+        color: var(--secondColor);
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .desc {
+        color: var(--grayColor);
+      }
+    }
+    .makeData {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      margin-top: 40px;
+      .data {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        border-left: 1px solid #eee;
+        &:last-child {
+          border: none;
+        }
+        img {
+          width: 48px;
+          aspect-ratio: 1/1;
+          object-fit: contain;
+        }
+      }
     }
   }
 }
