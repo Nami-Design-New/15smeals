@@ -272,7 +272,7 @@ header {
   flex-direction: column;
   background-color: var(--whiteColor);
   isolation: isolate;
-  z-index: 9999;
+  z-index: 1998;
 }
 header .topHeader {
   display: flex;
