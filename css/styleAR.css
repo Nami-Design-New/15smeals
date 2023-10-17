@@ -33,7 +33,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: ltr;
+  direction: rtl;
   scroll-behavior: smooth;
 }
 
@@ -136,7 +136,7 @@ input {
 }
 
 .odometer-inside {
-  direction: ltr !important;
+  direction: rtl !important;
 }
 
 .fancybox__container {
@@ -167,7 +167,7 @@ input {
 [type=number],
 [type=tel],
 [type=url] {
-  direction: ltr;
+  direction: rtl;
 }
 
 .fancybox__track,
@@ -219,7 +219,7 @@ content {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -228,8 +228,8 @@ content {
   transform: translateX(0%);
 }
 .lazyDiv.oppositeDir::after {
-  right: unset;
-  left: 0;
+  left: unset;
+  right: 0;
 }
 .lazyDiv .lazy {
   position: relative;
@@ -237,10 +237,10 @@ content {
   width: 100%;
 }
 .lazyDiv.loaded::after {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .lazyDiv.loaded.oppositeDir::after {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 .lazyDiv.loaded.down::after {
   transform: translateY(100%);
@@ -252,7 +252,7 @@ content {
 .preloader {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100dvh;
   background-color: white;
@@ -399,8 +399,8 @@ header nav .inner .logo {
   display: block;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   z-index: 2;
 }
 header nav .inner .logo img {
@@ -412,7 +412,7 @@ header nav .inner .logo img {
 @media screen and (max-width: 768px) {
   header nav .inner .logo {
     top: 0%;
-    left: 20px;
+    right: 20px;
     transform: translate(0%, -40%);
     width: 100px;
     height: 100px;
@@ -425,9 +425,9 @@ header nav .inner::before {
   background-color: #206332;
   display: block;
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   border-radius: 1000px;
   z-index: -1;
   transition: var(--transition);
@@ -435,7 +435,7 @@ header nav .inner::before {
 @media screen and (max-width: 768px) {
   header nav .inner::before {
     top: 0;
-    left: 15px;
+    right: 15px;
     transform: translate(0%, -40%);
     width: 110px;
     height: 110px;
@@ -467,9 +467,9 @@ header nav .inner .navbar .center {
     width: 100%;
     height: calc(100dvh - 146px);
     flex: auto;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     position: absolute;
-    right: 0;
+    left: 0;
     top: 100%;
     transition: var(--transition);
     z-index: -2;
@@ -501,7 +501,7 @@ header nav .inner .sideBtn span {
 header .headerAnimate {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   padding-top: 12px;
 }
 header .headerAnimate .inner::before {
@@ -548,7 +548,7 @@ header .headerAnimate .inner .logo {
   position: absolute;
   overflow: hidden;
   z-index: 0;
-  left: 0;
+  right: 0;
   top: 0;
   height: 100%;
   width: 100%;
@@ -570,7 +570,7 @@ header .headerAnimate .inner .logo {
   background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.7450980392));
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
@@ -650,7 +650,7 @@ header .headerAnimate .inner .logo {
 .swiperControl {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   padding: 20px;
   display: flex;
   gap: 24px;
@@ -663,8 +663,8 @@ header .headerAnimate .inner .logo {
 .swiperControl .swiperBtns .swiper-button-next,
 .swiperControl .swiperBtns .swiper-button-prev {
   position: relative;
-  left: unset;
   right: unset;
+  left: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -714,16 +714,16 @@ header .headerAnimate .inner .logo {
   opacity: 0.2;
 }
 .swiperControl .swiperBtns .swiper-button-next {
-  left: unset;
+  right: unset;
 }
-.swiperControl .swiperBtns .swiper-button-next::after {
+.swiperControl .swiperBtns .swiper-button-prev::after {
   transform: scaleX(-1);
 }
 .swiperControl .swiper-pagination {
   position: relative;
   min-height: 16px;
-  left: unset;
   right: unset;
+  left: unset;
   top: unset;
   bottom: unset;
   margin: unset;
@@ -780,7 +780,7 @@ header .headerAnimate .inner .logo {
 .latest .top .swiperControl {
   position: relative;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
   top: 0;
   padding: 8px;
@@ -816,7 +816,7 @@ header .headerAnimate .inner .logo {
   height: 100%;
   background: #f5f5f5;
   position: absolute;
-  right: 0;
+  left: 0;
   top: -60%;
   border-radius: 2000px;
   z-index: 1;
@@ -828,7 +828,7 @@ header .headerAnimate .inner .logo {
   height: 100%;
   background: var(--mainColor);
   position: absolute;
-  right: 0;
+  left: 0;
   top: -100%;
   border-radius: 2000px;
   z-index: 2;
@@ -928,7 +928,7 @@ header .headerAnimate .inner .logo {
 }
 .mainCategories .categories .accordionItem .accordionButton .plus {
   position: absolute;
-  right: 8px;
+  left: 8px;
   top: calc(50% - 12px);
   width: 24px;
   height: 24px;
@@ -937,7 +937,7 @@ header .headerAnimate .inner .logo {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   width: 12px;
   height: 2px;
   background-color: var(--secondColor);
@@ -948,7 +948,7 @@ header .headerAnimate .inner .logo {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   width: 12px;
   height: 2px;
   background-color: var(--secondColor);
@@ -964,7 +964,7 @@ header .headerAnimate .inner .logo {
   flex-direction: column;
   gap: 12px;
   padding: 16px 0 24px;
-  padding-left: 16px;
+  padding-right: 16px;
 }
 .mainCategories .categories .accordionItem .subCategory a {
   color: var(--grayColor);
@@ -1009,17 +1009,17 @@ header .headerAnimate .inner .logo {
 .mainCategories .recipes .subCategoryImg .text {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   padding: 24px;
-  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: center;
-  background: linear-gradient(to right, rgba(144, 99, 72, 0.7098039216) 20%, rgba(144, 99, 72, 0));
+  background: linear-gradient(to left, rgba(144, 99, 72, 0.7098039216) 20%, rgba(144, 99, 72, 0));
   border-radius: 12px;
 }
 .mainCategories .recipes .subCategoryImg .text .title {
@@ -1128,7 +1128,7 @@ header .headerAnimate .inner .logo {
   width: 100%;
   height: 100%;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   z-index: -1;
   border-radius: 24px;
@@ -1152,12 +1152,12 @@ header .headerAnimate .inner .logo {
   min-height: 54px;
   border-radius: 100px;
   padding: 16px 24px;
-  padding-right: 100px;
+  padding-left: 100px;
   border: none;
 }
 .subscribe .subscribeNews form button {
   position: absolute;
-  right: 6px;
+  left: 6px;
   top: 50%;
   transform: translateY(-50%);
   background: var(--mainColor);
@@ -1184,8 +1184,8 @@ header .headerAnimate .inner .logo {
   width: 400px;
   height: 88px;
   top: -88px;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 .count::before {
@@ -1198,8 +1198,8 @@ header .headerAnimate .inner .logo {
   width: 400px;
   height: 88px;
   bottom: 0px;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 .count .star {
@@ -1207,8 +1207,8 @@ header .headerAnimate .inner .logo {
   height: 200px;
   position: absolute;
   top: -110px;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
 }
 .count .counter {
@@ -1242,10 +1242,10 @@ header .headerAnimate .inner .logo {
   width: 80%;
   height: 80%;
   top: 50%;
-  right: 50%;
+  left: 50%;
   z-index: -2;
   border-radius: 100%;
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .count .counter .counterUp::after {
   position: absolute;
@@ -1257,7 +1257,7 @@ header .headerAnimate .inner .logo {
   width: 100%;
   height: 100%;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: -1;
   animation: rotate linear 60s infinite;
   opacity: 0.7;
@@ -1297,7 +1297,6 @@ header .headerAnimate .inner .logo {
   height: 16px;
   -o-object-fit: contain;
      object-fit: contain;
-  transform: scaleX(-1);
 }
 
 .singleBlog {
@@ -1364,8 +1363,8 @@ footer .logo img {
   aspect-ratio: 1/1;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: right;
+     object-position: right;
   max-height: 100px;
 }
 footer .title {
@@ -1388,12 +1387,12 @@ footer .subscribeNews form input {
   min-height: 54px;
   border-radius: 100px;
   padding: 16px 24px;
-  padding-right: 100px;
+  padding-left: 100px;
   border: 1px solid var(--secondColor20);
 }
 footer .subscribeNews form button {
   position: absolute;
-  right: 6px;
+  left: 6px;
   top: 50%;
   transform: translateY(-50%);
   background: var(--secondColor);
@@ -1757,7 +1756,7 @@ footer .socialMedia a:hover svg path {
   position: absolute;
   font-size: 14px;
   color: #7b88a8;
-  left: 32px;
+  right: 32px;
   transform: translateY(-50%);
   top: 50%;
   font-weight: 500;
@@ -1796,7 +1795,7 @@ footer .socialMedia a:hover svg path {
   content: "";
   width: 0;
   transition: var(--transition);
-  right: 50%;
+  left: 50%;
   height: 2px;
   background: var(--mainColor);
   position: absolute;
@@ -1807,7 +1806,7 @@ footer .socialMedia a:hover svg path {
   background: none;
   outline: none;
   align-self: flex-end;
-  margin-right: 32px;
+  margin-left: 32px;
   isolation: isolate;
   padding: 0 16px;
   width: 166px;
@@ -1827,7 +1826,7 @@ footer .socialMedia a:hover svg path {
   content: "";
   height: 150px;
   width: 0;
-  right: 10px;
+  left: 10px;
   transition: var(--transition);
   background: var(--mainColor);
   transform: rotate(-25deg);
@@ -1839,7 +1838,7 @@ footer .socialMedia a:hover svg path {
 }
 .contactPage form button:hover::after {
   width: 110%;
-  right: -10px;
+  left: -10px;
 }
 .contactPage .map-info {
   margin-top: 80px;
@@ -1996,7 +1995,7 @@ footer .socialMedia a:hover svg path {
 .recipeDetails .mainInfo .details .title .flag {
   height: 36px;
   border-radius: 4px;
-  margin-right: 4px;
+  margin-left: 4px;
 }
 .recipeDetails .mainInfo .details .categoryName {
   color: var(--secondColor);
@@ -2022,7 +2021,7 @@ footer .socialMedia a:hover svg path {
   text-align: center;
   align-items: center;
   padding: 20px;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
 }
 .recipeDetails .mainInfo .makeData .data:last-child {
   border: none;
@@ -2170,7 +2169,7 @@ footer .socialMedia a:hover svg path {
 .search {
   position: fixed;
   top: 0;
-  left: -300px;
+  right: -300px;
   height: 100dvh;
   z-index: 99998;
   display: flex;
@@ -2234,7 +2233,7 @@ footer .socialMedia a:hover svg path {
 }
 .search .searchIcon {
   background-color: var(--mainColor);
-  border-radius: 0 100% 100% 0;
+  border-radius: 100% 0 0 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -2256,7 +2255,7 @@ footer .socialMedia a:hover svg path {
   display: none;
 }
 .search.showSearch {
-  left: 0;
+  right: 0;
 }
 .search.showSearch .searchContect {
   box-shadow: -20px 0px 20px rgba(0, 0, 0, 0.1254901961);
@@ -2266,4 +2265,4 @@ footer .socialMedia a:hover svg path {
 }
 .search.showSearch .searchIcon .close {
   display: block;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styleAR.css.map */

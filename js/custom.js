@@ -44,6 +44,7 @@ $(document).ready(function () {
       return Math.max(videoDuration, minimumDelay);
     }
     return minimumDelay;
+    x;
   }
   // Initialize mainSlider
   const mainSlider = new Swiper(".mainSliderContainer", {
@@ -162,7 +163,6 @@ $(document).ready(function () {
       el: ".blogPagination",
       clickable: true,
     },
-
     // centeredSlides: true,
     // loop: true,
     slidesPerView: "auto",
@@ -207,7 +207,16 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
-
+  $(
+    " .latest .latestSlider .dishes .info .details , .mainCategories .recipes .recipe .info .details "
+  ).each(function () {
+    var text = $(this).text();
+    if (text.length > 80) {
+      var truncatedText =
+        $.trim(text).substring(0, 80).split(" ").slice(0, -1).join(" ") + "...";
+      $(this).text(truncatedText);
+    }
+  });
   // recipe-details
   var recipeThumbs = new Swiper(".recipeThumbs", {
     loop: true,
@@ -223,7 +232,6 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
     pagination: {
       el: ".recipeSliderPagination",
       clickable: true,
@@ -232,11 +240,96 @@ $(document).ready(function () {
       nextEl: ".recipeSliderNext",
       prevEl: ".recipeSliderPrev",
     },
-
     thumbs: {
       swiper: recipeThumbs,
     },
   });
+  // search
+  $(".searchIcon").click(function () {
+    $(".search").toggleClass("showSearch");
+  });
+  const data = [
+    "بيتزا ايطالي",
+    "بيتزا ببروني",
+    "بيتزا بالمشروم",
+    "بيتزا بالزيتون",
+    "بيتزا بالفلفل",
+    "بيتزا بالجبنة",
+    "بيتزا بالخضار",
+    "ساندويتش تونة",
+    "معكرونة بالصوص الأبيض",
+    "شوربة خضار",
+    "سلطة الكينوا",
+    "لحم بقر مشوي",
+    "كباب تركي",
+    "بيض مسلوق",
+    "أرز بالخضار",
+    "شوكولاتة سوداء",
+    "سلمون مشوي",
+    "موز",
+    "تفاح",
+    "زبادي بالفواكه",
+    "سمك مشوي",
+    "كاري دجاج",
+    "بيتزا بالفطر",
+    "همبرجر",
+    "بيتزا بالباذنجان",
+    "برغر دجاج",
+    "عصير تفاح",
+    "عصير برتقال",
+    "فاهيتا دجاج",
+    "شاورما لحم",
+    "كفتة",
+    "فطور إنجليزي",
+    "شراب فراولة",
+    "سلطة الفاصوليا",
+    "ساندويتش دجاج",
+    "فطائر السبانخ",
+    "كبسة",
+    "معكرونة بالصلصة الحمراء",
+    "عصير جوافة",
+    "ميلك شيك",
+    "كريب بالشوكولاتة",
+    "بسبوسة",
+    "كيك الجزر",
+    "مشروب الليمون",
+    "ساندويتش سمك",
+    "بسكويت الزبدة",
+    "فلافل",
+    "ترتور تركي",
+    "بيتزا بالفاصوليا",
+    "فتوش",
+    "كسكس",
+    "فلافل",
+    "ملفوف محشي",
+    "كفتة بالصلصة الحارة",
+    "بيتزا بالبقدونس",
+    "سمبوسة باللحم",
+  ];
+  const searchInput = $("#search-input");
+  const searchResults = $("#search-results");
+  searchInput.on("input", function () {
+    const searchTerm = searchInput.val().trim().toLowerCase();
+    const filteredData = data.filter((item) =>
+      item.toLowerCase().includes(searchTerm)
+    );
+    updateResults(filteredData);
+  });
+  function updateResults(results) {
+    searchResults.empty(); // Clear previous results
+    if (results.length === 0) {
+      searchResults.append("<p> لا يوجد نتائج.</p>");
+    } else {
+      $.each(results, function (index, result) {
+        const listItem = $("<li></li>");
+        const link = $("<a></a>")
+          .attr("href", "recipe-details.html")
+          .text(result);
+        listItem.append(link);
+        searchResults.append(listItem);
+      });
+    }
+  }
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -305,7 +398,6 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
-
 //contact higlight inputs
 function highlight(el) {
   el.previousElementSibling.classList.add("h");
@@ -315,7 +407,6 @@ function dehighlight(el) {
     el.previousElementSibling.classList.remove("h");
   }
 }
-
 // Add a click event handler to all elements with class "check"
 $(document).ready(function () {
   $(".makeIt .check").on("click", function () {

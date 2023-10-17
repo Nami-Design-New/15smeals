@@ -15,7 +15,7 @@
   <!-- Dark Theme Favicon -->
   <link rel="icon" type="image/x-icon" href="img/logoWhite.svg" id="browser-dark-theme-favicon" />
   <!-- bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
   <!-- main -->
   <link rel="stylesheet" href="css/main.css" />
   <!-- Custom style  -->
@@ -348,14 +348,26 @@
             </a>
           </div>
         </div>
-         <!-- pagination -->
-         <ul class="pagination justify-content-center mt-5">
+        <!-- pagination -->
+        <ul class="pagination justify-content-center mt-5">
           <a class="disabled" href="#!"> السابق </a>
           <a class="active" href="#!"> 1 </a>
           <a href="#!"> 2 </a>
           <a href="#!"> 3 </a>
           <a href="#!"> التالي </a>
         </ul>
+      </div>
+    </section>
+    <!-- search -->
+    <section class="search">
+      <div class="searchContect">
+        <input type="search" id="search-input" class="form-control" placeholder="بتدور علي ايه ..؟">
+        <p class="title"> نتائج البحث </p>
+        <ul id="search-results"></ul>
+      </div>
+      <div class="searchIcon">
+        <lottie-player class="icon" src="img/lottie-player-gif/search.json" loop autoplay></lottie-player>
+        <lottie-player class="icon close" src="img/lottie-player-gif/close.json" loop autoplay></lottie-player>
       </div>
     </section>
   </content>

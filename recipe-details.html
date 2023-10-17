@@ -15,7 +15,7 @@
   <!-- Dark Theme Favicon -->
   <link rel="icon" type="image/x-icon" href="img/logoWhite.svg" id="browser-dark-theme-favicon" />
   <!-- bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
   <!-- main -->
   <link rel="stylesheet" href="css/main.css" />
   <!-- Custom style  -->
@@ -184,6 +184,13 @@
                   <div class="swiper-wrapper">
                     <!-- slide -->
                     <div class="swiper-slide">
+                      <a href="https://www.youtube.com/embed/h6OhYx6GOKc?si=dfcsJXCx3Gky1sow" data-fancybox="recipe1">
+                        <iframe src="https://www.youtube.com/embed/h6OhYx6GOKc?si=dfcsJXCx3Gky1sow"
+                          allowfullscreen></iframe>
+                      </a>
+                    </div>
+                    <!-- slide -->
+                    <div class="swiper-slide">
                       <a href="img/meals/videos/v4.MP4" data-fancybox="recipe1">
                         <video muted loop autoplay>
                           <source src="img/meals/videos/v4.MP4" type="video/mp4">
@@ -239,7 +246,11 @@
                   <div class="swiper-wrapper">
                     <!-- slide -->
                     <div class="swiper-slide">
-                      <video muted loop autoplay>
+                      <iframe src="https://www.youtube.com/embed/h6OhYx6GOKc?si=dfcsJXCx3Gky1sow"></iframe>
+                    </div>
+                    <!-- slide -->
+                    <div class="swiper-slide">
+                      <video muted>
                         <source src="img/meals/videos/v4.MP4" type="video/mp4">
                       </video>
                     </div>
@@ -249,7 +260,7 @@
                     </div>
                     <!-- slide -->
                     <div class="swiper-slide">
-                      <video muted loop autoplay>
+                      <video muted>
                         <source src="img/meals/videos/v1.MP4" type="video/mp4">
                       </video>
                     </div>
@@ -259,7 +270,7 @@
                     </div>
                     <!-- slide -->
                     <div class="swiper-slide">
-                      <video muted loop autoplay>
+                      <video muted>
                         <source src="img/meals/videos/v2.MP4" type="video/mp4">
                       </video>
                     </div>
@@ -274,7 +285,8 @@
             <div class="col-md-7 p-3">
               <!-- details -->
               <div class="details">
-                <h1 class="title"> كالزوني أبيض مع صلصة المارينارا</h1>
+                <h1 class="title"><img src="img/Flag_of_Saudi_Arabia.svg" class="flag" alt=""> كالزوني أبيض مع صلصة
+                  المارينارا </h1>
                 <p class="desc">
                   تحتوي ماركات الريكوتا الموجودة في السوبر ماركت على مثبتات يمكن أن تعطي الجبن ملمسًا لزجًا عند خبزه.
                   تحقق من الملصق واختر الريكوتا المصنوعة بأقل عدد ممكن من المكونات.
@@ -302,7 +314,6 @@
               <div class="suggest">
                 <h5 class="title"> منتجات ننصح بها </h5>
                 <div class="products">
-
                   <a href="#!" class="product">
                     <img src="img/images.jpg" alt="">
                     رز الخير
@@ -319,17 +330,27 @@
         <div class="row pt-5">
           <div class="col-md-4 p-4">
             <div class="Ingredients">
-              <h3 class="title"> المكونات </h3>
+              <h4 class="title"> المقادير </h4>
               <ul>
                 <li> قشرة كالزوني مجهزة مسبقًا (يمكن شراؤها جاهزة أو صنعها في المنزل)</li>
                 <li> 2 كوب من الجبن الموتزاريلا المبشورة </li>
                 <li> 1/2 كوب من الجبن البارميزان المبشورة </li>
                 <li> 1/2 كوب من الريكوتا (الجبنة القريشة) </li>
                 <li> 1 بيضة </li>
+              </ul>
+            </div>
+            <div class="Ingredients">
+              <h4 class="title"> الحشوة </h4>
+              <ul>
                 <li> 2 ملعقة كبيرة من البقدونس المفروم </li>
                 <li> ملح وفلفل أسود حسب الذوق </li>
                 <li> 2 كوب من صلصة الطماطم (ممكن استخدام صلصة جاهزة أو تحضير صلصة منزلية) </li>
                 <li> 1 ملعقة صغيرة من زيت الزيتون </li>
+              </ul>
+            </div>
+            <div class="Ingredients">
+              <h4 class="title"> للتزيين </h4>
+              <ul>
                 <li> 2 فص ثوم مفرومين </li>
                 <li> 1/2 ملعقة صغيرة من الأوريجانو المجفف </li>
                 <li> ملح وفلفل أسود حسب الذوق </li>
@@ -390,6 +411,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <!-- search -->
+    <section class="search">
+      <div class="searchContect">
+        <input type="search" id="search-input" class="form-control" placeholder="بتدور علي ايه ..؟">
+        <p class="title"> نتائج البحث </p>
+        <ul id="search-results"></ul>
+      </div>
+      <div class="searchIcon">
+        <lottie-player class="icon" src="img/lottie-player-gif/search.json" loop autoplay></lottie-player>
+        <lottie-player class="icon close" src="img/lottie-player-gif/close.json" loop autoplay></lottie-player>
       </div>
     </section>
   </content>
