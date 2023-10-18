@@ -252,7 +252,7 @@ header {
   flex-direction: column;
   background-color: var(--whiteColor);
   isolation: isolate;
-  z-index: 1999;
+  z-index: 1199;
   .topHeader {
     display: flex;
     justify-content: space-between;
@@ -2097,7 +2097,7 @@ footer {
   top: 0;
   left: -300px;
   height: 100dvh;
-  z-index: 998;
+  z-index: 1200;
   display: flex;
   align-items: center;
   transition: var(--transition);

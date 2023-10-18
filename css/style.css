@@ -272,7 +272,7 @@ header {
   flex-direction: column;
   background-color: var(--whiteColor);
   isolation: isolate;
-  z-index: 1999;
+  z-index: 1199;
 }
 header .topHeader {
   display: flex;
@@ -2172,7 +2172,7 @@ footer .socialMedia a:hover svg path {
   top: 0;
   left: -300px;
   height: 100dvh;
-  z-index: 998;
+  z-index: 1200;
   display: flex;
   align-items: center;
   transition: var(--transition);

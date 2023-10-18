@@ -245,9 +245,22 @@ $(document).ready(function () {
     },
   });
   // search
-  $(".searchIcon").click(function () {
-    $(".search").toggleClass("showSearch");
-  });
+
+    $(".searchIcon").click(function (e) {
+      e.stopPropagation(); 
+      $(".search").toggleClass("showSearch");
+        $(document).on("click", function (event) {
+        if (!$(event.target).closest(".searchContect").length) {
+          $(".search").removeClass("showSearch");
+        }
+      });
+    });
+      $(".searchContect").click(function (e) {
+      e.stopPropagation();
+    });
+
+  
+
   const data = [
     "بيتزا ايطالي",
     "بيتزا ببروني",
