@@ -2104,8 +2104,8 @@ footer {
   .searchContect {
     width: min(100% - 32px, 500px);
     height: 100dvh;
-    background-color: #ffffffc5;
-    backdrop-filter: blur(4px);
+    background-color: #ffffff;
+    // backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
     padding-top: 40px;

@@ -2179,9 +2179,7 @@ footer .socialMedia a:hover svg path {
 .search .searchContect {
   width: min(100% - 32px, 500px);
   height: 100dvh;
-  background-color: rgba(255, 255, 255, 0.7725490196);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
